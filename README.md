@@ -72,7 +72,7 @@ _You might need to download the CelebA dataset to `datasets/` manually due to a 
 | `requirements.txt`    | Python requirements.                                                                                                  |
 | `results.json.orig`   | Original `results.json`.                                                                                              |
 | `README.md`           | You are here.                                                                                                         |
-| `workaround.py`       | Workaround for a missing feature in the current `flower` implementation                                               |                     
+| `workaround.py`       | Workaround for a [missing feature](https://github.com/adap/flower/pull/1115) in the current `flower` implementation.                                               |                     
 | `conf/`               | Configuration YAML files.                                                                                             |
 | `Dockerfile`          | Allows to build a docker container to run jupyter.                                                                    |
 | `main.ipynb`          | Juptyer notebook to run individual experiments and display the results.                                               |
