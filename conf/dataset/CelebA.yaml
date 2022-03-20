@@ -1,0 +1,5 @@
+name: CelebA
+channels: 3
+x: 178
+y: 218
+n_out: 10178

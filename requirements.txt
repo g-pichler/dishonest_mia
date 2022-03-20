@@ -1,0 +1,15 @@
+torch
+numpy
+matplotlib
+tqdm
+flwr==0.18
+sklearn
+scikit-learn
+scipy
+torchvision
+pandas
+ipywidgets
+pyyaml
+jupyter
+hydra-core
+filelock

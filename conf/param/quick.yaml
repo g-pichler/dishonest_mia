@@ -1,0 +1,5 @@
+defaults:
+  - default
+
+batches: 2
+runs: 10

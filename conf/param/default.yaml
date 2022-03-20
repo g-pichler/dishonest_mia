@@ -1,0 +1,8 @@
+batchsize: 32
+batches: 128
+epsilon: 0.001
+epochs: 1
+runs: 200
+top_j: 4
+optimizer: ${optimizer.name}
+dataset: ${dataset.name}

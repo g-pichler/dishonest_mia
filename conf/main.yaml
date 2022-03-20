@@ -1,0 +1,7 @@
+defaults:
+  - dataset: MNIST
+  - optimizer: SGD
+  - param: default
+  - runtime: default
+
+

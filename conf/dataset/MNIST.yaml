@@ -1,0 +1,5 @@
+name: MNIST
+channels: 1
+x: 28
+y: 28
+n_out: 10

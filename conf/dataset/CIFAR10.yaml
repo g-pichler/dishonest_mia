@@ -1,0 +1,5 @@
+name: CIFAR10
+channels: 3
+x: 32
+y: 32
+n_out: 10

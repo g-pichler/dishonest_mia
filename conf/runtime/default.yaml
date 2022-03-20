@@ -1,0 +1,3 @@
+output_dir: ./output
+dataset_dir: ./datasets
+duplicates: ./duplicates.json
