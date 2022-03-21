@@ -16,14 +16,15 @@ This code can be used to reproduce the findings in
 The original values are saved in `results.orig.json` and can also be explored.
 
 ### Docker container
-The repository allows the use to enjoy a containarized version of the code taking care of the creation and setting up of a conda environment with all the required packages. In case docker is not installed, we suggest the following [guide](https://docs.docker.com/engine/install/). The following guide has been written considering a Linux based system. 
+A `Dockerfile` is included to provide a containarized version of the code, taking care of the creation and setting up of the Python environment with all the required packages. A working Docker environment is needed. There are several tutorials for setting up a docker installation, e.g., [this one](https://docs.docker.com/engine/install/). The following guide has been written for a Linux based system. 
 Steps required to run the Jupyter Notebook in a docker container:
-1. Navigate to the folder where the Dockerfile is stored;
+1. Navigate to the folder where the Dockerfile is stored (root directory of this repository);
 2. Execute 
    ```console
    foo@bar:~$ DOCKER_BUILDKIT=1 docker build -t dishonest_mia .
-   ``` 
-3. The following command activates a virtual environment environment, installs the required packages and launches the Jupyter notebook (since it is launced with no browser support, the information about the token is also displayed at this point):
+   ```
+   This downloads the environment and python packages.
+3. The following command launches the container and the Jupyter notebook (since it is launced with no browser support, the information about the token is also displayed at this point):
    ```console
    foo@bar:~$  docker run --network host -e port=8888 dishonest_mia
    ```
