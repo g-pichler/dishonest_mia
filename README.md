@@ -25,21 +25,9 @@ Steps required to run the Jupyter Notebook in a docker container:
    ``` 
 3. The following command activates a virtual environment environment, installs the required packages and launches the Jupyter notebook (since it is launced with no browser support, the information about the token is also displayed at this point):
    ```console
-   foo@bar:~$  docker run --network host -e port=<port> dishonest_mia
+   foo@bar:~$  docker run --network host -e port=8888 dishonest_mia
    ```
-4. (optional) In case the docker container is running remotely the next step is required in the local machine:
-   ```console
-   foo@bar:~$ ssh -N -f -L localhost:<local_port>:localhost:<port> user@remote_server
-   ```
-5. Open a browser (in the local machine) and browse to localhost:<local_port>.
-
-#### Useful heads-up concerning docker
-- If the following error occurs 
-   ```
-     Got permission denied while trying to connect to the Docker daemon socket ... permission denied
-   ```
-   the solution can be found [here](https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket);
-- We have noticed that docker tends to create quite some dirt in the dedicated folder, some useful commands to clean up can be found [here](https://stackoverflow.com/questions/27853571/why-is-docker-image-eating-up-my-disk-space-that-is-not-used-by-docker), [here](https://docs.docker.com/engine/reference/commandline/rmi/), [here](https://docs.docker.com/engine/reference/commandline/system_prune/), and [here](https://gist.github.com/evanscottgray/8571828).
+4. Open a browser (in the local machine) and browse to [http://localhost:8888](http://localhost:8888). The login token can be found in the docker output.
 
 ## Commandline Usage
 To reproduce all results in the paper, `main.py` can be used:
