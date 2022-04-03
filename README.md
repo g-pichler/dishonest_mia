@@ -58,7 +58,15 @@ To reproduce all results in the paper, `main.py` can be used:
     ```
  5. Results are available in `output/results.json`. They can be explored using the `main.ipynb` notebook.
 
-_You might need to download the CelebA dataset to `datasets/` manually due to a [bug](https://github.com/pytorch/vision/issues/2262)._
+## Caveats
+- _You might need to download the CelebA dataset to `datasets/` manually due to a [bug](https://github.com/pytorch/vision/issues/2262)._
+- We disable the use of [TensorFloat-32](https://blogs.nvidia.com/blog/2020/05/14/tensorfloat-32-precision-format/):
+  ```python
+  torch.backends.cuda.matmul.allow_tf32 = False
+  torch.backends.cudnn.allow_tf32 = False
+  ```
+  TF32 reduces the floating point precision dramatically. On modern platforms pytorch uses this feature [by default](https://github.com/pytorch/pytorch/issues/67384).
+  Using our method with `allow_tf32 = True` would require a larger `epsilon` to account for the decreased precision.
 
 
 ## Files and directories

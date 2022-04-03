@@ -16,6 +16,16 @@ import flwr as fl
 # https://github.com/adap/flower/pull/1115
 import workaround
 
+# Disallow TF32 usage to avoid numerical errors
+if torch.cuda.is_available():
+    try:
+        import torch.backends.cuda
+        import torch.backends.cudnn
+        torch.backends.cuda.matmul.allow_tf32 = False
+        torch.backends.cudnn.allow_tf32 = False
+    except:
+        pass
+
 import logging
 logger = logging.getLogger(__name__)
 
