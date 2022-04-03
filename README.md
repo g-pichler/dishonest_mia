@@ -1,7 +1,8 @@
 # Perfectly Accurate Membership Inference by a Dishonest Central Server in Federated Learning
 
 This code can be used to reproduce the findings in 
-`Perfectly Accurate Membership Inference by a Dishonest Central Server in Federated Learning`.
+`Perfectly Accurate Membership Inference by a Dishonest Central Server in Federated Learning`
+([arXiv:2203.16463](https://arxiv.org/abs/2203.16463)).
 
 ## Jupyter Notebook
 
