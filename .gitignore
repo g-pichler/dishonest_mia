@@ -3,3 +3,5 @@ imgs/
 outputs/
 output/
 multirun/
+.idea/
+__pycache__/
