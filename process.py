@@ -35,6 +35,9 @@ def process(inside, outside, threshold_f):
     results['accuracy_f'] = accuracy_f
     results['threshold_f'] = threshold_f
 
+    results['min_inside'] = np.array(inside).min()
+    results['max_outside'] = np.array(outside).max()
+
     fpr, tpr, thresholds = roc
     i_best = np.argmax(tpr - fpr)
     threshold_b = (thresholds[i_best] + thresholds[i_best+1]) / 2.0
